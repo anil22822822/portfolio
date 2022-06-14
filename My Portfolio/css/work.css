@@ -1,0 +1,246 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+  :root {
+    --bg-color: #ece5da;
+    --name-font: "Fredericka the Great", cursive;
+    --heading-font: "Gruppo", cursive;
+    --paragraph-font: "Julius Sans One", sans-serif;
+    --color2: rgba(33, 37, 41, 0.92);
+    --montserrat: "Montserrat", sans-serif;
+    --comfortaa: "Comfortaa", cursive;
+  }
+  header {
+    background-color: #fdfff5;
+  }
+  
+  li,
+  a {
+    font-family: var(--heading-font);
+    color: var(--color2);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  #navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 4%;
+    /*   border-bottom: 1px solid black; */
+    box-shadow: 1px 6px 15px 2px #adb5bd;
+  }
+  
+  .logo {
+    width: 8%;
+  }
+  
+  .nav_links {
+    list-style: none;
+  }
+  .nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  
+  .nav_links li a {
+    transition: all 0.3s ease 0;
+    position: relative;
+    padding: 0.5vw;
+  }
+  
+  .nav_links li a:hover {
+    color: black;
+  }
+  #projects {
+    margin: 0vw 10vw;
+    padding: 2vw;
+  }
+  
+  .nav_links li a::before,
+  .nav_links li a::after {
+    content: "";
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all 0.35s ease;
+    opacity: 0;
+  }
+  
+  .nav_links li a::before {
+    content: "";
+    right: 0;
+    top: 0;
+    border-top: 2px solid rgba(33, 37, 41, 0.92);
+    border-right: 2px solid rgba(33, 37, 41, 0.92);
+    transform: translate(-100%, 50%);
+  }
+  
+  .nav_links li a:after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    border-bottom: 2px solid rgba(33, 37, 41, 0.92);
+    border-left: 2px solid rgba(33, 37, 41, 0.92);
+    transform: translate(100%, -50%);
+  }
+  
+  .nav_links li a:hover:before,
+  .nav_links li a:hover:after {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  
+  .nav_links li a:hover {
+    color: black;
+  }
+  .project-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .project-title h1 {
+    font-family: var(--paragraph-font);
+    color: black;
+    font-size: 35px;
+    padding: 2vw;
+  }
+  #school-project h3 {
+    font-family: var(--heading-font);
+    color: black;
+    font-size: 28px;
+  }
+  .img {
+    width: 17vw;
+    height: 17vw;
+    background-color: var(--color2);
+  }
+  
+  #project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px 10px;
+    max-width: 886px;
+  }
+  
+  .box {
+    height: 20vw;
+    width: 20vw;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .box h1 {
+    font-family: var(--heading-font);
+    color: black;
+    font-size: 30px;
+    padding: 1vw;
+  }
+  
+  #box1 {
+    background-color: rgba(199, 125, 255, 0.76);
+  }
+  #box2 {
+    background-color: rgba(57, 99, 175, 0.82);
+  }
+  #box3 {
+    background-color: rgba(74, 78, 105, 0.82);
+  }
+  #box4 {
+    background-color: rgba(255, 234, 0, 1);
+  }
+ 
+  #box1 img {
+    display: block;
+    width: 100%;
+  }
+  #box6 h2 {
+    font-family: var(--heading-font);
+    color: var(--color2);
+    font-size: 30px;
+  }
+  #box6 .fa-github {
+    color: var(--color2);
+    font-size: 50px;
+    margin-right: 10vw;
+  }
+  #box6 .fa-github:hover {
+    color: black;
+    transform: rotate(10deg);
+  }
+  #box6 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    border-top-right-radius: 4ex;
+    
+    
+  }
+  .box h3 {
+    font-family: var(--paragraph-font);
+    color: black;
+    font-size: 15px;
+    opacity: 0;
+  }
+  
+  .box:hover {
+    opacity: 0.8;
+    outline: #fff solid 2px;
+    outline-offset: -10px;
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95) ease 2s;
+  }
+  
+  .box:hover h3 {
+    opacity: 1;
+  }
+  
+  #social_links {
+    display: flex;
+    flex-direction: row;
+  
+    padding: 2vw;
+  }
+  
+  #social_links .fa-github,
+  #social_links .fa-linkedin,
+  #social_links .fa-twitter-square {
+    color: var(--color2);
+    font-size: 38px;
+    margin: 0 1.5vw;
+  }
+  
+  #social_links .fa-github:hover,
+  #social_links .fa-linkedin:hover,
+  #social_links .fa-twitter-square:hover {
+    color: black;
+    transform: rotate(10deg);
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    .box h1 {
+      font-size: 15px;
+    }
+  
+    .project-title h1 {
+      font-size: 26px;
+    }
+    #social_links .fa-github,
+    #social_links .fa-linkedin,
+    #social_links .fa-twitter-square {
+      font-size: 26px;
+    }
+    #box6 h2 {
+      font-size: 25px;
+    }
+  
+  }
